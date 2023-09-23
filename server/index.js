@@ -4,6 +4,8 @@ import { Server } from "socket.io";
 import http from "http";
 import router from "./router.js";
 
+import { addUser, removeUser, getUser, getUsersInRoom } from "./users.js";
+
 const port = process.env.PORT || 5000;
 
 const app = express();
@@ -19,14 +21,27 @@ app.use(router);
 app.use(cors());
 
 io.on("connection", (socket) => {
-  console.log("User connected");
-
   socket.on("join", ({ name, room }, callback) => {
-    let error = false;
+    const { error, user } = addUser({ id: socket.id, name, room });
 
     if (error) {
-      callback({ error: "error" });
+      callback(error);
     }
+
+    // Send the welcome message to the new user
+    socket.emit("message", {
+      user: "admin",
+      text: `${user.name}, welcome to the room ${user.room}`,
+    });
+
+    // Broadcast the welcome message to all other users
+    socket.broadcast
+      .to(user.room)
+      .emit("message", { user: "admin", text: `${user.name} has joined!` });
+
+    socket.join(user.room);
+
+    callback();
   });
 
   socket.on("disconnect", () => {
