@@ -21,6 +21,14 @@ app.use(cors());
 io.on("connection", (socket) => {
   console.log("User connected");
 
+  socket.on("join", ({ name, room }, callback) => {
+    let error = false;
+
+    if (error) {
+      callback({ error: "error" });
+    }
+  });
+
   socket.on("disconnect", () => {
     console.log("User disconnected");
   });
