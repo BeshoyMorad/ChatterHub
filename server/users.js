@@ -18,7 +18,7 @@ export const addUser = ({ id, name, room }) => {
   });
   if (existingUser) {
     return {
-      error: "Username is in use!",
+      user: existingUser,
     };
   }
 
