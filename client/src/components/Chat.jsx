@@ -19,9 +19,6 @@ import Message from "./Message";
 let socket;
 
 function Chat({ name, room }) {
-  // REMOVE
-  // name = "beshoy";
-  // room = "Operation";
   const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -33,14 +30,14 @@ function Chat({ name, room }) {
     socket.emit("join", { name, room }, (error) => {
       if (error) {
         console.log(error);
+        navigate("/");
       }
     });
 
     return () => {
-      socket.emit("userDisconnected");
       socket.off();
     };
-  }, [endpoint, name, room]);
+  }, [endpoint, name, room, navigate]);
 
   useEffect(() => {
     socket.on("message", (message) => {
