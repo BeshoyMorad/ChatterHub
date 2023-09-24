@@ -48,16 +48,16 @@ In a rapidly evolving digital landscape, effective communication is key. **Chatt
 
 ### _👋 Joining Rooms_
 
-![join](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/4d22b473-7860-4cdf-bcb8-c4f415293424)
+![join](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/6e809cb6-68c9-4b9a-9da5-896bf97f2a98)
 
 ---
 
 ### _🗨️ Chatting_
 
-![chat 1](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/4071fda4-fe82-4575-b7fa-83004ffb6fc7)
-![chat 2](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/6cd3f3e1-e530-4f1d-ac07-13157fc4b312)
-![chat 3](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/afc26194-ee68-484e-9572-b46aa309ab70)
-![chat 4](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/c9355861-6063-4d0c-944b-8ccfa5e60614)
+![chat 1](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/7af55a5d-aece-4e3f-955d-30a10dd14d44)
+![chat 2](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/6488ae95-415c-48d6-97b5-7cec79c4c664)
+![chat 3](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/5d7ad291-35cf-4b22-91c4-7161a0439a25)
+![chat 4](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/4cea9a45-960d-4b9c-bebb-dd68a465187f)
 
 ---
 
