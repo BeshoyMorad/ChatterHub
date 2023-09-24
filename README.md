@@ -48,9 +48,16 @@ In a rapidly evolving digital landscape, effective communication is key. **Chatt
 
 ### _👋 Joining Rooms_
 
+![join](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/4d22b473-7860-4cdf-bcb8-c4f415293424)
+
 ---
 
 ### _🗨️ Chatting_
+
+![chat 1](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/4071fda4-fe82-4575-b7fa-83004ffb6fc7)
+![chat 2](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/6cd3f3e1-e530-4f1d-ac07-13157fc4b312)
+![chat 3](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/afc26194-ee68-484e-9572-b46aa309ab70)
+![chat 4](https://github.com/BeshoyMorad/ChatterHub/assets/82404564/c9355861-6063-4d0c-944b-8ccfa5e60614)
 
 ---
 
