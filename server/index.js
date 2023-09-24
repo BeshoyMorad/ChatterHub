@@ -23,9 +23,8 @@ app.use(cors());
 io.on("connection", (socket) => {
   socket.on("join", ({ name, room }, callback) => {
     const { error, user } = addUser({ id: socket.id, name, room });
-
     if (error) {
-      callback(error);
+      return callback(error);
     }
 
     // Send the welcome message to the new user
@@ -47,13 +46,24 @@ io.on("connection", (socket) => {
   socket.on("sendMessage", (message, callback) => {
     const user = getUser(socket.id);
 
+    if (!user) {
+      return callback({ error: "User not found!" });
+    }
+
     io.to(user.room).emit("message", { user: user.name, text: message });
 
     callback();
   });
 
   socket.on("disconnect", () => {
-    console.log("User disconnected");
+    const user = removeUser(socket.id);
+
+    if (user) {
+      io.to(user.room).emit("message", {
+        user: "admin",
+        text: `${user.name} has left.`,
+      });
+    }
   });
 });
 
