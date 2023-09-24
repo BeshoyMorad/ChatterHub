@@ -40,6 +40,12 @@ io.on("connection", (socket) => {
 
     socket.join(user.room);
 
+    // Send users and room info
+    io.to(user.room).emit("roomData", {
+      room: user.room,
+      users: getUsersInRoom(user.room),
+    });
+
     callback();
   });
 
@@ -59,9 +65,16 @@ io.on("connection", (socket) => {
     const user = removeUser(socket.id);
 
     if (user) {
+      // Notify other users
       io.to(user.room).emit("message", {
         user: "admin",
         text: `${user.name} has left.`,
+      });
+
+      // Send users and room info
+      io.to(user.room).emit("roomData", {
+        room: user.room,
+        users: getUsersInRoom(user.room),
       });
     }
   });
